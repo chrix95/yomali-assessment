@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Stats</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <h2>Table with Fetched Data</h2>
+
+    <ul class="navbar">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="stats.html">Tracking Stats</a>
+        </li>
+        <li>
+            <a href="about-us.html">About Us</a>
+        </li>
+        <li>
+            <a href="blog.html">Blog</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+    </ul>
+    <div class="row">
+        <div class="item">
+            <form id="dateFilterForm" onsubmit="submitDateFilter(event)">
+                <div class="group">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" name="startDate">
+                </div>
+                <div class="group">
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" name="endDate">
+                </div>
+                <div class="group">
+                    <button type="submit">Apply Filter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <table id="data-table">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Page Url</th>
+            <th>Unique Visits</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <script src="assets/js/stats.js"></script>
+</body>
+</html>
